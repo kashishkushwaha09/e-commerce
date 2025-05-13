@@ -8,7 +8,8 @@ const getProductById=(req,res)=>{
 res.send(`<h1>${service.fetchProductById(req)}</h1>`)
 }
 const postProduct=(req,res)=>{
-res.send(`<h1>${service.addProduct()}</h1>`)
+// res.send(`<h1>${service.addProduct()}</h1>`)
+res.json({value:req.body.productName});  
 }
 
 module.exports={

@@ -4,7 +4,8 @@ const port=4200;
 const userRouter=require('./routes/user');
 const productRouter=require('./routes/product');
 const cartRouter=require('./routes/cart');
-
+server.use(express.static('public'));
+server.use(express.json());
 server.use('/users',userRouter);
 server.use('/products',productRouter);
 server.use('/cart',cartRouter);
